@@ -1,3 +1,16 @@
+:root {
+  --cor-cafe-escuro: #2c1b12;
+  --cor-primaria: #8c6239;
+  --cor-primaria-hover: #6f4e2d;
+  --cor-creme: #fdfaf6;
+  --cor-card-bg: #ffffff;
+  --texto-principal: #3d312a;
+  --texto-suave: #7d6b60;
+  --borda: #eae3dc;
+  --transicao-suave: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --raio-borda: 12px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,163 +18,351 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background-color: #fdfdfd;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--cor-creme);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul, ol {
-  list-style: none;
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
 }
 
 .escondido {
-  display: none;
+  display: none !important;
 }
 
 .cabecalho {
-  background-color: #4b2e2b;
-  color: #fff;
-  padding: 1rem 2rem;
+  background-color: var(--cor-cafe-escuro);
+  box-shadow: 0 4px 12px rgba(44, 27, 18, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .barra-navegacao {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--cor-creme);
+  letter-spacing: 0.5px;
+}
+
+.logo::after {
+  content: ' ☕';
 }
 
 .links-navegacao {
+  list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
+.links-navegacao a {
+  text-decoration: none;
+  color: #d1c7bd;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: var(--transicao-suave);
+}
+
+.links-navegacao a:hover {
+  color: var(--cor-creme);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 .links-navegacao a.ativo {
-  text-decoration: underline;
+  color: var(--cor-creme);
+  background-color: var(--cor-primaria);
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.titulo-pagina {
-  margin-bottom: 1.5rem;
+.links-navegacao a.ativo:hover {
+  background-color: var(--cor-primaria-hover);
 }
 
 .destaque {
   text-align: center;
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f0e8 100%);
+  padding: 4.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--borda);
+  box-shadow: 0 10px 30px rgba(44, 27, 18, 0.03);
+  margin-top: 1.5rem;
 }
 
 .destaque h1 {
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  color: var(--cor-cafe-escuro);
+  margin-bottom: 1rem;
+  font-weight: 800;
 }
 
-.destaque .subtitulo {
-  margin-bottom: 1.5rem;
+.subtitulo {
+  font-size: 1.3rem;
+  color: var(--cor-primaria);
+  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .destaque p {
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+  margin-bottom: 2.5rem;
+}
+
+.destaque strong {
+  color: var(--cor-cafe-escuro);
+  font-size: 1.4rem;
+  background: #eae3dc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
 }
 
 .botao {
   display: inline-block;
-  background-color: #6f4e37;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 4px;
+  text-decoration: none;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 0.9rem 2.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: var(--raio-borda);
+  box-shadow: 0 4px 6px rgba(140, 98, 57, 0.2);
+  transition: var(--transicao-suave);
   cursor: pointer;
-  font-size: 1rem;
+  border: none;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(140, 98, 57, 0.35);
+}
+
+.botao:active {
+  transform: translateY(-1px);
+}
+
+.titulo-pagina {
+  font-size: 2.2rem;
+  color: var(--cor-cafe-escuro);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+}
+
+.titulo-pagina::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--cor-primaria);
+  margin: 0.6rem auto 0 auto;
+  border-radius: 2px;
 }
 
 .lista-cartoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .cartao {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 1rem;
-  width: 220px;
+  background-color: var(--cor-card-bg);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-borda);
+  padding: 1.8rem;
+  transition: var(--transicao-suave);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  position: relative;
 }
 
-.cartao h2 {
-  margin-bottom: 0.25rem;
+.cartao:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(44, 27, 18, 0.08);
+  border-color: var(--cor-primaria);
 }
 
-.cartao p {
-  margin-bottom: 1rem;
-  color: #666;
+/* ==========================================================================
+   ESTILIZAÇÃO DO FORMULÁRIO DE AVALIAÇÃO (CORREÇÃO DA IMAGEM)
+   ========================================================================== */
+form {
+  background-color: var(--cor-card-bg);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-borda);
+  padding: 2.5rem;
+  max-width: 550px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(44, 27, 18, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.formulario-avaliacao {
+/* Alinha os textos (labels) acima de cada campo de input/select */
+form label, 
+form {
+  font-weight: 600;
+  color: var(--cor-cafe-escuro);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Estilo unificado para todas as caixas de seleção e campos de texto */
+form select,
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--texto-principal);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transicao-suave);
+  display: block;
+  margin-top: 0.4rem; /* Garante um espaço agradável entre o rótulo e o campo */
+}
+
+/* Efeito ao clicar/focar no campo de digitação */
+form select:focus,
+form input:focus,
+form textarea:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 4px rgba(140, 98, 57, 0.12);
+  background-color: #fff;
+}
+
+/* Garante que o botão de salvar ocupe largura total ou fique bem posicionado */
+form .botao,
+form button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* ========================================================================== */
+
+.lista-ranking {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
+  counter-reset: ranking-counter;
 }
 
-.grupo-formulario {
+.lista-ranking li {
+  background-color: var(--cor-card-bg);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-borda);
+  padding: 1.2rem 1.5rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transicao-suave);
+  position: relative;
+  counter-increment: ranking-counter;
 }
 
-.grupo-formulario input,
-.grupo-formulario select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.lista-ranking li:hover {
+  transform: translateX(5px);
+  border-color: var(--cor-primaria);
+  box-shadow: 0 4px 12px rgba(44, 27, 18, 0.05);
+}
+
+.lista-ranking li::before {
+  content: counter(ranking-counter) "º";
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--cor-primaria);
+  background-color: var(--cor-creme);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+  border: 1px solid var(--borda);
+}
+
+.lista-ranking li:nth-child(1)::before {
+  background-color: #ffd700;
+  color: #5c4308;
+  border-color: #e6c200;
+}
+
+.lista-ranking li:nth-child(2)::before {
+  background-color: #c0c0c0;
+  color: #3d3d3d;
+  border-color: #a8a8a8;
+}
+
+.lista-ranking li:nth-child(3)::before {
+  background-color: #cd7f32;
+  color: #4a2807;
+  border-color: #b06a24;
 }
 
 .mensagem {
-  padding: 0.6rem;
-  border-radius: 4px;
-  background-color: #e6f4ea;
-  color: #256029;
-}
-
-.lista-ranking {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.item-ranking {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0.75rem 1rem;
-}
-
-.item-ranking.primeiro {
-  border-color: #d4af37;
-  background-color: #fdf6e3;
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+  margin-top: 3rem;
+  font-style: italic;
 }
 
 .rodape {
+  background-color: var(--cor-cafe-escuro);
+  color: #a3958c;
   text-align: center;
   padding: 1.5rem;
-  color: #888;
   font-size: 0.9rem;
+  border-top: 3px solid var(--cor-primaria);
+  margin-top: 4rem;
+}
+
+@media (max-width: 600px) {
+  .barra-navegacao {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .links-navegacao {
+    gap: 0.5rem;
+  }
+  
+  .links-navegacao a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .destaque h1 {
+    font-size: 2rem;
+  }
 }
