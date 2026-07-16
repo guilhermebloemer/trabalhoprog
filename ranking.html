@@ -1,35 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ranking - Coffee Quality Challenge</title>
-  <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Quality Challenge - Ranking</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="cabecalho">
-    <nav class="barra-navegacao">
-      <span class="logo">Coffee Quality</span>
-      <ul class="links-navegacao">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="cafes.html">Cafés</a></li>
-        <li><a href="avaliar.html">Avaliar</a></li>
-        <li><a href="ranking.html" class="ativo">Ranking</a></li>
+<header>
+  <div class="logo"><i class="fa-solid fa-mug-hot"></i> COFFEE QUALITY CHALLENGE</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cafes.html">Cafés</a>
+    <a href="avaliar.html">Avaliar</a>
+    <a href="ranking.html" class="active">Ranking</a>
+  </nav>
+</header>
+
+<main class="page ranking-layout">
+  <section class="ranking-section">
+    <h2><i class="fa-solid fa-trophy"></i> Ranking Geral</h2>
+    
+    <div class="ranking-container">
+      <div class="ranking-item">
+        <div class="posicao-info">
+          <div class="podio-medalha"><i class="fa-solid fa-medal ouro"></i></div>
+          <span class="posicao-numero">1º</span>
+          <div>
+            <h3 style="font-size:15px; margin:0;">Bourbon Amarelo</h3>
+            <p style="margin:0; color:#7A6A5A; font-size: 13px;">Minas Gerais</p>
+          </div>
+        </div>
+        <div class="media-ranking">8.7</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="posicao-info">
+          <div class="podio-medalha"><i class="fa-solid fa-medal prata"></i></div>
+          <span class="posicao-numero">2º</span>
+          <div>
+            <h3 style="font-size:15px; margin:0;">Arara</h3>
+            <p style="margin:0; color:#7A6A5A; font-size: 13px;">Espírito Santo</p>
+          </div>
+        </div>
+        <div class="media-ranking">8.3</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="posicao-info">
+          <div class="podio-medalha"><i class="fa-solid fa-medal bronze"></i></div>
+          <span class="posicao-numero">3º</span>
+          <div>
+            <h3 style="font-size:15px; margin:0;">Catuaí Vermelho</h3>
+            <p style="margin:0; color:#7A6A5A; font-size: 13px;">Paraná</p>
+          </div>
+        </div>
+        <div class="media-ranking">7.9</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="posicao-info">
+          <div class="podio-medalha"></div> 
+          <span class="posicao-numero">4º</span>
+          <div>
+            <h3 style="font-size:15px; margin:0;">Mundo Novo</h3>
+            <p style="margin:0; color:#7A6A5A; font-size: 13px;">Bahia</p>
+          </div>
+        </div>
+        <div class="media-ranking">7.2</div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="metodologia-section">
+    <div class="metodologia-card">
+      <div class="metodologia-header">
+        <i class="fa-solid fa-bullseye" style="font-size: 20px;"></i>
+        <h3 style="margin:0;">Metodologia</h3>
+      </div>
+      <p style="color:#7A6A5A; font-size:13px; line-height:1.5;">
+        As avaliações são baseadas nos critérios da metodologia SCA:
+      </p>
+      <ul>
+        <li>Aroma</li>
+        <li>Doçura</li>
+        <li>Acidez</li>
+        <li>Corpo</li>
+        <li>Finalização</li>
       </ul>
-    </nav>
-  </header>
+      <p style="color:#7A6A5A; font-size:12px; line-height:1.5; border-top: 1px dashed #EAE3D8; padding-top:12px; margin-top:10px;">
+        Notas de 0 a 10 para cada critério. A média final é calculada pela média aritmética dos critérios.
+      </p>
+    </div>
+  </aside>
+</main>
 
-  <main>
-    <h1 class="titulo-pagina">Ranking</h1>
-    <ol id="lista-ranking" class="lista-ranking"></ol>
-    <p id="ranking-vazio" class="mensagem escondido">Nenhuma avaliação registrada ainda.</p>
-  </main>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-bullseye"></i></div>
+      <div>
+        <h4>Objetivo</h4>
+        <p>Avaliar e reconhecer os melhores cafés.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-mug-hot"></i></div>
+      <div>
+        <h4>Avalie</h4>
+        <p>Use seus sentidos para dar notas justas.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-chart-simple"></i></div>
+      <div>
+        <h4>Compare</h4>
+        <p>Veja o ranking e descubra os destaques.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-heart"></i></div>
+      <div>
+        <h4>Valorize</h4>
+        <p>Incentive a qualidade e o trabalho dos produtores.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <span>"Cada xícara carrega uma história. Vamos descobrir as melhores?"</span>
+    <i class="fa-solid fa-mug-hot"></i>
+  </div>
+</footer>
 
-  <footer class="rodape">
-    <p>Coffee Quality Challenge - IFC</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

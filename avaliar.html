@@ -1,70 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avaliar - Coffee Quality Challenge</title>
-  <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Quality Challenge - Avaliar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="cabecalho">
-    <nav class="barra-navegacao">
-      <span class="logo">Coffee Quality</span>
-      <ul class="links-navegacao">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="cafes.html">Cafés</a></li>
-        <li><a href="avaliar.html" class="ativo">Avaliar</a></li>
-        <li><a href="ranking.html">Ranking</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo"><i class="fa-solid fa-mug-hot"></i> COFFEE QUALITY CHALLENGE</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cafes.html">Cafés</a>
+    <a href="avaliar.html" class="active">Avaliar</a>
+    <a href="ranking.html">Ranking</a>
+  </nav>
+</header>
 
-  <main>
-    <h1 class="titulo-pagina">Nova Avaliação</h1>
+<main class="page" style="max-width:650px;">
+  <h2><i class="fa-solid fa-pen"></i> Nova Avaliação</h2>
 
-    <form id="formulario-avaliacao" class="formulario-avaliacao">
+  <div class="card">
+    <label for="cafe">Café</label>
+    <select id="cafe">
+      <option selected>Bourbon Amarelo</option>
+      <option>Catuaí Vermelho</option>
+      <option>Arara</option>
+      <option>Mundo Novo</option>
+    </select>
 
-      <div class="grupo-formulario">
-        <label for="cafe">Café:</label>
-        <select id="cafe" name="cafe" required></select>
+    <div class="row2">
+      <div>
+        <label for="aroma">Aroma</label>
+        <input type="text" id="aroma" value="8">
       </div>
-
-      <div class="grupo-formulario">
-        <label for="aroma">Aroma (0 a 10):</label>
-        <input type="number" id="aroma" name="aroma" min="0" max="10" step="0.1" required>
+      <div>
+        <label for="docura">Doçura</label>
+        <input type="text" id="docura" value="9">
       </div>
+    </div>
 
-      <div class="grupo-formulario">
-        <label for="docura">Doçura (0 a 10):</label>
-        <input type="number" id="docura" name="docura" min="0" max="10" step="0.1" required>
+    <div class="row2">
+      <div>
+        <label for="acidez">Acidez</label>
+        <input type="text" id="acidez" value="7">
       </div>
-
-      <div class="grupo-formulario">
-        <label for="acidez">Acidez (0 a 10):</label>
-        <input type="number" id="acidez" name="acidez" min="0" max="10" step="0.1" required>
+      <div>
+        <label for="corpo">Corpo</label>
+        <input type="text" id="corpo" value="8">
       </div>
+    </div>
 
-      <div class="grupo-formulario">
-        <label for="corpo">Corpo (0 a 10):</label>
-        <input type="number" id="corpo" name="corpo" min="0" max="10" step="0.1" required>
+    <div class="row2">
+      <div>
+        <label for="finalizacao">Finalização</label>
+        <input type="text" id="finalizacao" value="9">
       </div>
-
-      <div class="grupo-formulario">
-        <label for="finalizacao">Finalização (0 a 10):</label>
-        <input type="number" id="finalizacao" name="finalizacao" min="0" max="10" step="0.1" required>
+      <div>
+        <div class="media-box" style="margin-top: 25px;">
+          <p style="margin:0; font-size: 13px; font-weight: 700;">Média Atual</p>
+          <div class="numero">8.2</div>
+        </div>
       </div>
+    </div>
 
-      <button type="submit" class="botao">Salvar Avaliação</button>
+    <button class="btn"><i class="fa-solid fa-floppy-disk"></i> Salvar Avaliação</button>
+  </div>
+</main>
 
-      <p id="mensagem-avaliacao" class="mensagem escondido"></p>
-    </form>
-  </main>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-bullseye"></i></div>
+      <div>
+        <h4>Objetivo</h4>
+        <p>Avaliar e reconhecer os melhores cafés.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-mug-hot"></i></div>
+      <div>
+        <h4>Avalie</h4>
+        <p>Use seus sentidos para dar notas justas.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-chart-simple"></i></div>
+      <div>
+        <h4>Compare</h4>
+        <p>Veja o ranking e descubra os destaques.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-heart"></i></div>
+      <div>
+        <h4>Valorize</h4>
+        <p>Incentive a qualidade e o trabalho dos produtores.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <span>"Cada xícara carrega uma história. Vamos descobrir as melhores?"</span>
+    <i class="fa-solid fa-mug-hot"></i>
+  </div>
+</footer>
 
-  <footer class="rodape">
-    <p>Coffee Quality Challenge - IFC</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
