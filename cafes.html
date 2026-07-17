@@ -1,34 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafés - Coffee Quality Challenge</title>
-  <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Quality Challenge - Cafés</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="cabecalho">
-    <nav class="barra-navegacao">
-      <span class="logo">Coffee Quality</span>
-      <ul class="links-navegacao">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="cafes.html" class="ativo">Cafés</a></li>
-        <li><a href="avaliar.html">Avaliar</a></li>
-        <li><a href="ranking.html">Ranking</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo"><i class="fa-solid fa-mug-hot"></i> COFFEE QUALITY CHALLENGE</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cafes.html" class="active">Cafés</a>
+    <a href="avaliar.html">Avaliar</a>
+    <a href="ranking.html">Ranking</a>
+  </nav>
+</header>
 
-  <main>
-    <h1 class="titulo-pagina">Cafés</h1>
-    <div id="lista-cartoes" class="lista-cartoes"></div>
-  </main>
+<main class="page">
+  <h2><i class="fa-solid fa-seedling"></i> Cafés Participantes</h2>
 
-  <footer class="rodape">
-    <p>Coffee Quality Challenge - IFC</p>
-  </footer>
+  <div class="card cafe-item">
+    <div class="info">
+      <div class="bean-box"><i class="fa-solid fa-circle-dot" style="color: #8B5E3C;"></i></div>
+      <div>
+        <h3 style="margin:0;">Bourbon Amarelo</h3>
+        <p style="margin:0; color:#7A6A5A; font-size: 14px;">Origem: Minas Gerais</p>
+      </div>
+    </div>
+    <a href="avaliar.html" class="btn-outline">Avaliar</a>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="card cafe-item">
+    <div class="info">
+      <div class="bean-box"><i class="fa-solid fa-circle-dot" style="color: #8B5E3C;"></i></div>
+      <div>
+        <h3 style="margin:0;">Catuaí Vermelho</h3>
+        <p style="margin:0; color:#7A6A5A; font-size: 14px;">Origem: Paraná</p>
+      </div>
+    </div>
+    <a href="avaliar.html" class="btn-outline">Avaliar</a>
+  </div>
+
+  <div class="card cafe-item">
+    <div class="info">
+      <div class="bean-box"><i class="fa-solid fa-circle-dot" style="color: #8B5E3C;"></i></div>
+      <div>
+        <h3 style="margin:0;">Arara</h3>
+        <p style="margin:0; color:#7A6A5A; font-size: 14px;">Origem: Espírito Santo</p>
+      </div>
+    </div>
+    <a href="avaliar.html" class="btn-outline">Avaliar</a>
+  </div>
+
+  <div class="card cafe-item">
+    <div class="info">
+      <div class="bean-box"><i class="fa-solid fa-circle-dot" style="color: #8B5E3C;"></i></div>
+      <div>
+        <h3 style="margin:0;">Mundo Novo</h3>
+        <p style="margin:0; color:#7A6A5A; font-size: 14px;">Origem: Bahia</p>
+      </div>
+    </div>
+    <a href="avaliar.html" class="btn-outline">Avaliar</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-bullseye"></i></div>
+      <div>
+        <h4>Objetivo</h4>
+        <p>Avaliar e reconhecer os melhores cafés.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-mug-hot"></i></div>
+      <div>
+        <h4>Avalie</h4>
+        <p>Use seus sentidos para dar notas justas.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-chart-simple"></i></div>
+      <div>
+        <h4>Compare</h4>
+        <p>Veja o ranking e descubra os destaques.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-heart"></i></div>
+      <div>
+        <h4>Valorize</h4>
+        <p>Incentive a qualidade e o trabalho dos produtores.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <span>"Cada xícara carrega uma história. Vamos descobrir as melhores?"</span>
+    <i class="fa-solid fa-mug-hot"></i>
+  </div>
+</footer>
+
 </body>
 </html>

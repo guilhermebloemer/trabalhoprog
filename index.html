@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Quality Challenge</title>
-  <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Quality Challenge - Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="cabecalho">
-    <nav class="barra-navegacao">
-      <span class="logo">Coffee Quality</span>
-      <ul class="links-navegacao">
-        <li><a href="index.html" class="ativo">Início</a></li>
-        <li><a href="cafes.html">Cafés</a></li>
-        <li><a href="avaliar.html">Avaliar</a></li>
-        <li><a href="ranking.html">Ranking</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo"><i class="fa-solid fa-mug-hot"></i> COFFEE QUALITY CHALLENGE</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="cafes.html">Cafés</a>
+    <a href="avaliar.html">Avaliar</a>
+    <a href="ranking.html">Ranking</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="destaque">
-      <h1>Coffee Quality Challenge</h1>
-      <p class="subtitulo">Avaliação Sensorial de Cafés Especiais</p>
-      <p>Cafés Participantes: <strong id="total-cafes">4</strong></p>
-      <a href="cafes.html" class="botao">Ver Cafés</a>
-    </section>
-  </main>
+<main class="page">
+  <div class="hero-section">
+    <div class="hero-icon"><i class="fa-solid fa-mug-hot"></i></div>
+    <h1>COFFEE QUALITY CHALLENGE</h1>
+    <p style="font-size:16px; margin-bottom: 10px; font-weight: 600;">Campeonato de Avaliação Sensorial de Cafés Especiais</p>
+    <p style="color:#7A6A5A; max-width:500px; margin:0 auto 30px; font-size: 14px;">
+      Avalie, compare e descubra os melhores cafés através dos seus sentidos.
+    </p>
 
-  <footer class="rodape">
-    <p>Coffee Quality Challenge - IFC</p>
-  </footer>
+    <div class="stats">
+      <div class="stat-box">
+        <div><i class="fa-solid fa-users"></i></div>
+        <p>Cafés Participantes</p>
+        <div class="numero">4</div>
+      </div>
+      <div class="stat-box">
+        <div><i class="fa-solid fa-clipboard-list"></i></div>
+        <p>Avaliações Registradas</p>
+        <div class="numero">0</div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+    <a href="cafes.html" class="btn" style="display: inline-flex; width: auto; padding: 14px 35px;">
+      <i class="fa-solid fa-mug-hot"></i> Ver Cafés
+    </a>
+  </div>
+</main>
+
+<section class="about-section">
+  <div class="about-icon"><i class="fa-solid fa-seedling"></i></div>
+  <div>
+    <h3 style="margin-bottom: 5px;">Sobre o Campeonato</h3>
+    <p style="color:#7A6A5A; font-size: 14px; line-height:1.6;">
+      Este campeonato tem como objetivo promover a qualidade dos nossos cafés através de avaliações sensoriais baseadas nos critérios da metodologia SCA.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-bullseye"></i></div>
+      <div>
+        <h4>Objetivo</h4>
+        <p>Avaliar e reconhecer os melhores cafés.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-mug-hot"></i></div>
+      <div>
+        <h4>Avalie</h4>
+        <p>Use seus sentidos para dar notas justas.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-chart-simple"></i></div>
+      <div>
+        <h4>Compare</h4>
+        <p>Veja o ranking e descubra os destaques.</p>
+      </div>
+    </div>
+    <div class="footer-item">
+      <div class="icone"><i class="fa-solid fa-heart"></i></div>
+      <div>
+        <h4>Valorize</h4>
+        <p>Incentive a qualidade e o trabalho dos produtores.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-quote">
+    <span>"Cada xícara carrega uma história. Vamos descobrir as melhores?"</span>
+    <i class="fa-solid fa-mug-hot"></i>
+  </div>
+</footer>
+
 </body>
 </html>
